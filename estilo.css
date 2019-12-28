@@ -1,9 +1,12 @@
 body{
+    background: url("img/\(FINAL\)RACONET\ DE\ RUSSAFA\ Sello\ -\ Negativo.jpg") repeat-y top left, url("img/\(FINAL\)RACONET\ DE\ RUSSAFA\ Sello\ -\ Negativo.jpg")repeat-y top right;/* La primera url cambia la imagen de la izquierda.la segunda la de la derecha*/
+    background-size:400px; /*Cambiad pixeles para aumentar o disminuir el tamaño de la imagen de los lados*/
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #333;
     font-size: 1.2rem;
     line-height:1.6em;
     margin: 0;
+
 }
 p{margin-bottom: 1.6em;}
 
@@ -14,6 +17,8 @@ font-size:2rem;}
 max-width:850px;
 margin: 0 auto;}
 
+
+/*Si vais a cambiar el header os recomiendo que solo cambieis colores o la imagen del logo,cambiar valores numericos podria hacer que todo se vaya al garete,en caso de cambio,aplicadlo a los 3 estilos.*/
 .header{
     background: #333;
     color:white;
@@ -34,6 +39,7 @@ text-decoration:none;
     align-items:center;
     flex-wrap: wrap;
 }
+
 .logo{width: 170px;
 height:125px;}
 
@@ -41,6 +47,14 @@ height:125px;}
     display:none;
 }
 
+.navegacion li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+.navegacion > li {float:left;}
+.navegacion li:hover > ul{display:block}
+.navegacion li ul li {position:relative;}
 .navegacion ul {
     margin:0;
     padding: 0;
@@ -64,7 +78,7 @@ height:125px;}
 .footer {background:#f2f2f2;
 padding: 4rem 0;
 text-align: center;
-margin-top: 6rem;}
+margin-top: 6rem;} /*Cambiad el footer como veais mejor pero que utilicen los 3 estilos el mismo/*
 
 /* esta parte es solo para cuando se usa con dispositivos pequeños */
 @media only screen and (max-width: 767px) {
@@ -83,7 +97,12 @@ margin-top: 6rem;}
 .navegacion ul.show {
     display:block;
 }
-
+.navegacion li ul {
+    display:none;
+    position:relative;
+    min-width:140px;
+}
+.navegacion li:hover > ul{display:none;}
     .navegacion ul li {
         display:block;
     }
@@ -95,4 +114,5 @@ margin-top: 6rem;}
     }
     .navegacion ul li a:hover {
         background: #4a4a4a;
+}
 }
